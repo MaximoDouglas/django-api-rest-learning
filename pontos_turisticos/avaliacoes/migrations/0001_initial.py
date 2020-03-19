@@ -16,12 +16,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Comentario',
+            name='Avaliacao',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('comentario', models.TextField()),
+                ('comentario', models.TextField(blank=True, null=True)),
+                ('nota', models.DecimalField(decimal_places=2, max_digits=3)),
                 ('data', models.DateTimeField(auto_now_add=True)),
-                ('aprovado', models.BooleanField(default=True)),
                 ('pontoTuristico', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.PontoTuristico')),
                 ('usuario', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
