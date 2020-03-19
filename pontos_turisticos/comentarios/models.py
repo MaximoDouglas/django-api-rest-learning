@@ -1,12 +1,14 @@
 from django.contrib.auth.models import User
 from django.db import models
+from core.models import PontoTuristico
 
 class Comentario(models.Model):
-    usuario    = models.ForeignKey(User, on_delete=models.CASCADE())
-    comentario = models.TextField()
-    data       = models.DateTimeField(auto_now_add=True)
-    aprovado   = models.BooleanField(default=True)
-
+    usuario        = models.ForeignKey(User, on_delete=models.CASCADE)
+    comentario     = models.TextField()
+    data           = models.DateTimeField(auto_now_add=True)
+    aprovado       = models.BooleanField(default=True)
+    pontoTuristico = models.ForeignKey(PontoTuristico, on_delete=models.CASCADE)
+    
     def __str__(self):
-        return self.usuario.first_name
+        return self.usuario.username
         
