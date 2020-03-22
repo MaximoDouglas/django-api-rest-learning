@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'core',
     'shows',
     'comentarios',
-    'avaliacoes',
+    'ratings',
     'enderecos',
 ]
 
