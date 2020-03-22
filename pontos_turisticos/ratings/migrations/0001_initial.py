@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('core', '0001_initial'),
+        ('tourist_attractions', '0001_initial'),
     ]
 
     operations = [
@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('comments', models.TextField(blank=True, null=True)),
                 ('rating', models.DecimalField(decimal_places=2, max_digits=3)),
                 ('date', models.DateTimeField(auto_now_add=True)),
-                ('attraction_place', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.PontoTuristico')),
+                ('tourist_attraction', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tourist_attractions.TouristAttraction')),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
