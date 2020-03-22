@@ -20,14 +20,14 @@ from django.conf.urls import include
 from core.api.viewsets import PontoTuristicoViewSet
 from shows.api.viewsets import ShowViewSet
 from enderecos.api.viewsets import EnderecoViewSet
-from comentarios.api.viewsets import ComentarioViewSet
+from comments.api.viewsets import CommentViewSet
 from ratings.api.viewsets import RatingViewSet
 
 router = routers.DefaultRouter()
 router.register(r'pontosturisticos', PontoTuristicoViewSet, basename='PontoTuristico')
 router.register(r'atracoes', ShowViewSet)
 router.register(r'enderecos', EnderecoViewSet)
-router.register(r'comentarios', ComentarioViewSet)
+router.register(r'comentarios', CommentViewSet)
 router.register(r'avaliacoes', RatingViewSet)
 
 urlpatterns = [

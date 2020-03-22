@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'shows',
-    'comentarios',
+    'comments',
     'ratings',
     'enderecos',
 ]
