@@ -1,4 +1,4 @@
-# Django API REST
+# Django API REST sample projects
 ### Environment setup and project running
 1. Enter ```./<project-name>``` folder;
 2. Create a virtual environment with ```python3 -m venv <you-env-name>```;
