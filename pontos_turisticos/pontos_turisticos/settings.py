@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'shows',
     'comments',
     'ratings',
-    'enderecos',
+    'adresses',
 ]
 
 MIDDLEWARE = [

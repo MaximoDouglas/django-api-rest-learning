@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('shows', '0001_initial'),
-        ('enderecos', '0001_initial'),
+        ('adresses', '0001_initial'),
     ]
 
     operations = [
@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('nome', models.CharField(max_length=150)),
                 ('descricao', models.TextField()),
                 ('aprovado', models.BooleanField(default=False)),
-                ('endereco', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='enderecos.Endereco')),
+                ('address', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='adresses.Address')),
                 ('shows', models.ManyToManyField(to='shows.Show')),
             ],
         ),
