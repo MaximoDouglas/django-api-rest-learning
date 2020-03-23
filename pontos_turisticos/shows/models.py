@@ -7,4 +7,4 @@ class Show(models.Model):
     min_age       = models.IntegerField()
 
     def __str__(self):
-        return self.nome
+        return self.name
