@@ -5,6 +5,7 @@ class Show(models.Model):
     description   = models.TextField()
     working_shift = models.TextField()
     min_age       = models.IntegerField()
+    photo         = models.ImageField(upload_to='shows', null=True, blank=True)
 
     def __str__(self):
         return self.name
