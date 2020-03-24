@@ -3,14 +3,18 @@ from django.db.models import Q
 from tourist_attractions.models import TouristAttraction
 from tourist_attractions.api.serializers import TouristAttractionSerializer
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.filters import SearchFilter
 from rest_framework.decorators import action
 
 class TouristAttractionViewSet(ModelViewSet):
-    serializer_class = TouristAttractionSerializer
-    filter_backends  = (SearchFilter,)
-    search_fields    = ('name', 'description', 'address__street')
-    lookup_field     = 'guid'
+    serializer_class       = TouristAttractionSerializer
+    filter_backends        = (SearchFilter,)
+    search_fields          = ('name', 'description', 'address__street')
+    lookup_field           = 'guid'
+    permission_classes     = (IsAuthenticated,)
+    authentication_classes = (TokenAuthentication,)
 
     def get_queryset(self):
         id          = self.request.query_params.get('id', None)
