@@ -10,6 +10,7 @@ class TouristAttractionViewSet(ModelViewSet):
     serializer_class = TouristAttractionSerializer
     filter_backends  = (SearchFilter,)
     search_fields    = ('name', 'description', 'address__street')
+    lookup_field     = 'guid'
 
     def get_queryset(self):
         id          = self.request.query_params.get('id', None)
