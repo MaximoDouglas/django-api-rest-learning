@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'comments',
     'ratings',
     'adresses',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
