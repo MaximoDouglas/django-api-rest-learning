@@ -4,4 +4,4 @@ from comments.models import Comment
 class CommentSerializer(ModelSerializer):
     class Meta:
         model  = Comment
-        fields = '__all__'
+        fields = ('user', 'text', 'date', 'approved', 'tourist_attraction', 'formated_comment')
