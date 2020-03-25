@@ -1,10 +1,9 @@
 # Django API REST sample projects
 
-## Projects
-### pontos_turisticos
+## pontos_turisticos
 It is a project that creates an API RESTful for tourist attractions, with comments, ratings, address, etc. The objective of this project is to apply basics and intermediate concepts on [Django Rest Framework](https://www.django-rest-framework.org/). The architecture of this application can be generalized for pretty much any other small CRUD-like application and it is a good option to be used as example project.
 
-## Environment setup and project running
+### Environment setup and project running
 1. Enter ```./<project-name>``` folder;
 2. Create a virtual environment with ```python3 -m venv <you-env-name>```;
 3. Start the created virtual env with ```. <you-env-name>/bin/activate```;
