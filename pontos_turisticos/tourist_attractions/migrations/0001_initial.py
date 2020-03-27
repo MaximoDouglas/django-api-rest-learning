@@ -2,7 +2,7 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
-
+import tourist_attractions.models
 
 class Migration(migrations.Migration):
 
@@ -17,6 +17,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TouristAttraction',
             fields=[
+                ('guid', models.CharField(default=tourist_attractions.models.randomString, editable=False, max_length=10)),
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=150)),
                 ('description', models.TextField()),
