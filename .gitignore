@@ -140,3 +140,6 @@ dmypy.json
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
+
+# Static image files
+/pontos_turisticos/images
