@@ -5,8 +5,6 @@ from tourist_attractions.models import TouristAttraction
 from shows.models import Show
 from tourist_attractions.api.serializers import TouristAttractionSerializer
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.authentication import TokenAuthentication
 from rest_framework.filters import SearchFilter
 from rest_framework.decorators import action
 
@@ -15,8 +13,6 @@ class TouristAttractionViewSet(ModelViewSet):
     filter_backends        = (SearchFilter,)
     search_fields          = ('name', 'description', 'address__street')
     lookup_field           = 'guid'
-    permission_classes     = (IsAuthenticated,)
-    authentication_classes = (TokenAuthentication,)
 
     def get_queryset(self):
         id          = self.request.query_params.get('id', None)
