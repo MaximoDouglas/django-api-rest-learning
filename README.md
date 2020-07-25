@@ -1,5 +1,3 @@
-# Django API REST sample projects
-
 ## Tourist Attractions Project
 - Online -> [here](https://argmax-turistando.herokuapp.com/)
 - Directory -> ./pontos_turisticos/
